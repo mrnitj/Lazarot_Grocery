@@ -6,14 +6,13 @@ import UserHome from "./pages/User/UserHome";
 import Cart from "./pages/User/Cart";
 import { useMode } from "./store/mode-store";
 // -------------
-import { lightTheme,darkTheme } from "./theme";
-
+import { lightTheme, darkTheme } from "./theme";
 
 const App = () => {
-    const {mode , setMode} = useMode()
+    const { mode, setMode } = useMode();
     return (
         <div>
-            <ThemeProvider theme={mode? darkTheme : lightTheme} >
+            <ThemeProvider theme={mode ? darkTheme : lightTheme}>
                 <Router>
                     <Routes>
                         <Route path="/" element={<UserHome />} />
