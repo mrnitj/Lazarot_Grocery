@@ -23,9 +23,9 @@ const Maincontainer = styled(AppBar)(({ theme }) => ({
     fontFamily: "Plus Jakarta Sans, sans-serif",
     background: theme.palette.mode === "light" ? "black" : "white",
     borderBottom: "1px solid #E5E8EB",
-    [theme.breakpoints.down('sm')]:{
-      padding:'0 1rem'
-    }
+    [theme.breakpoints.down("sm")]: {
+        padding: "0 1rem",
+    },
 }));
 const Toolbrs = styled(Toolbar)(({ theme }) => ({
     padding: "0",
@@ -119,7 +119,7 @@ const NavbarComp = () => {
                         <img src={profile} alt="profile" />
                     </Avatar>
                     <IconButtons>
-                        <MenuIcon sx={{ color: `${mode ? "#191716" : "white"}` , fontSize:'30px'}} />
+                        <MenuIcon sx={{ color: `${mode ? "#191716" : "white"}`, fontSize: "30px" }} />
                     </IconButtons>
                 </Right_Section>
             </Toolbrs>

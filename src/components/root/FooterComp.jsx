@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const FooterComp = () => {
-  return (
-    <div>FooterComp</div>
-  )
-}
+    return <div>FooterComp</div>;
+};
 
-export default FooterComp
+export default FooterComp;
