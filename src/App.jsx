@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
 // ---pages-----
-import UserHome from "./pages/User/UserHome";
 import Cart from "./pages/User/Cart";
 import { useMode } from "./store/mode-store";
 // -------------
 import { lightTheme, darkTheme } from "./theme";
+import UserPage from "./pages/User/UserPage";
 
 const App = () => {
     const { mode, setMode } = useMode();
@@ -15,7 +15,7 @@ const App = () => {
             <ThemeProvider theme={mode ? darkTheme : lightTheme}>
                 <Router>
                     <Routes>
-                        <Route path="/" element={<UserHome />} />
+                        <Route path="/" element={<UserPage />} />
                         <Route path="/user/cart" element={<Cart />} />
                     </Routes>
                 </Router>

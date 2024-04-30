@@ -1,13 +1,17 @@
 import { Box, styled } from "@mui/material";
 import React from "react";
-import NavbarComp from "../../components/root/NavbarComp";
+import MainSection from "../../components/User/Home/MainSection";
 
 const Maincontainer = styled(Box)(({ theme }) => ({}));
+const Subcontainer = styled(Box)(({ theme }) => ({
+    display: "flex",
+}));
+const HomepageContent = styled(Box)(({ theme }) => ({}));
 
 const UserHome = () => {
     return (
         <Maincontainer>
-            <NavbarComp />
+            <MainSection />
         </Maincontainer>
     );
 };
