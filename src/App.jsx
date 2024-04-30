@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
 // ---pages-----
@@ -10,6 +10,12 @@ import UserPage from "./pages/User/UserPage";
 
 const App = () => {
     const { mode, setMode } = useMode();
+    useEffect(() => {
+        document.body.style.backgroundColor = mode
+            ? darkTheme.palette.primary.main
+            : lightTheme.palette.primary.main;
+    }, [mode]);
+
     return (
         <div>
             <ThemeProvider theme={mode ? darkTheme : lightTheme}>

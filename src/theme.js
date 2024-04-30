@@ -12,6 +12,10 @@ export const lightTheme = createTheme({
             light: "#333333",
             contrastText: "#FFFFFF",
         },
+        text: {
+            primary: "#FFFFFF",
+            secondary: "#6B6B6B",
+        },
     },
 });
 
@@ -26,6 +30,10 @@ export const darkTheme = createTheme({
             main: "#EDEDED",
             light: "#D9D9D9",
             contrastText: "#191716",
+        },
+        text: {
+            primary: "#000000",
+            secondary: "#6B6B6B",
         },
     },
 });

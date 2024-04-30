@@ -11,14 +11,14 @@ const HomepageContent = styled(Box)(({ theme }) => ({}));
 
 const UserPage = () => {
     return (
-            <Maincontainer>
+        <Maincontainer>
+            <Box sx={{ position: "sticky", top: "0" }}>
                 <NavbarComp />
-                <Subcontainer>
+            </Box>
+            <Subcontainer>
                     <SidebarComp />
-                    <HomepageContent>
-                    </HomepageContent>
-                </Subcontainer>
-            </Maincontainer>
+            </Subcontainer>
+        </Maincontainer>
     );
 };
 
