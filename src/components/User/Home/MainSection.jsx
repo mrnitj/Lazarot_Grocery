@@ -1,9 +1,75 @@
-import React from 'react'
+import { Box, Grid, Typography, styled } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import React from "react";
+
+// images-------
+import section11 from "../../../assets/User/section11.png";
+import section1 from "../../../assets/User/section1.png";
+
+const Maincontainer = styled(Box)(({ theme }) => ({}));
+const GridContainer = styled(Grid)(({ theme }) => ({}));
+const GridItem = styled(Grid)(({ theme }) => ({}));
+const ImageContainer = styled(Box)(({ theme }) => ({
+    height: "242px",
+    background: `url(${section11})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    [theme.breakpoints.down("sm")]: {
+        background: `url(${section1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+    },
+}));
+const TextContainer = styled(Box)(({ theme }) => ({
+    height: "242px",
+}));
+const Titles = styled(Box)(({ theme }) => ({}));
+const Buttons = styled(Box)(({ theme }) => ({}));
 
 const MainSection = () => {
-  return (
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus pariatur modi cumque velit dolorum esse eius vel ab laboriosam earum praesentium molestiae nesciunt et ipsum minima, minus maiores quisquam reiciendis consectetur error? Vero aut facilis dicta deleniti aliquid nam accusantium quas unde recusandae, veritatis dolores hic qui ex cupiditate cumque perferendis. Iste provident sequi numquam maiores impedit tenetur ex distinctio, necessitatibus quisquam odio excepturi voluptatem qui fuga dignissimos, ipsam aut? Facilis dolorum possimus similique distinctio dolorem, autem inventore laudantium minus qui quasi accusamus odio dignissimos voluptatum assumenda placeat veniam delectus doloribus iure commodi, natus beatae sapiente tempora tempore praesentium! Necessitatibus odio consequatur, labore ex deleniti accusamus, iste quae dolores, quia sit porro. Odio, quos unde. Consectetur a mollitia facilis unde nesciunt commodi quam voluptates esse itaque hic et, veritatis aliquam. Dolore repudiandae rerum eveniet iure, dicta iusto modi, adipisci beatae molestiae nobis totam blanditiis numquam sapiente ipsum eos non hic natus laborum ea nostrum! Necessitatibus, dolores labore nihil ipsum accusamus deserunt, alias provident dolorum modi at sunt adipisci explicabo veritatis laborum! Ipsa, excepturi, inventore impedit praesentium magnam, labore harum delectus quisquam alias in sint laudantium temporibus blanditiis assumenda? Optio perferendis facere asperiores quis debitis ratione est voluptates mollitia, aspernatur tenetur, inventore dolores ut distinctio temporibus beatae quidem repudiandae non rerum illo officiis. Est, atque cupiditate tempora quisquam at iusto earum cumque sapiente. Explicabo accusantium cum autem fugiat adipisci repudiandae quaerat? Quidem ipsam, est officia iure temporibus eligendi distinctio ipsum. Obcaecati ex minima, pariatur adipisci, eum itaque voluptatibus commodi veritatis voluptatum repudiandae accusamus atque nemo? Sint, inventore? Molestias sit non praesentium, quis quam quaerat doloremque dolorem, alias itaque quia officia sunt iure. Fugiat mollitia in soluta dolore odio doloremque. Blanditiis iure magnam natus odit atque magni deserunt voluptate doloribus aliquid, culpa et rerum eum doloremque repudiandae incidunt sit nostrum alias quisquam eius praesentium repellendus eos. Voluptatem ad quae dolore! Asperiores ipsum consectetur iure doloribus itaque nulla voluptates, laborum culpa voluptatum a laudantium magni illo quis. Excepturi dolorum nostrum accusamus consequuntur, eius officia velit sit provident, veniam blanditiis nesciunt alias numquam facere inventore perferendis ea eligendi placeat quidem? Ea sed perferendis laudantium? Quod inventore necessitatibus ratione iure sed numquam eveniet officiis, doloribus quae, eos rem itaque? Mollitia deleniti inventore sint at perferendis maiores. Quaerat dolorum doloribus, non distinctio necessitatibus quo ipsa eveniet ratione, a quas qui voluptatem? Sapiente dolore saepe quia rerum et fugit deleniti inventore perspiciatis earum. Iusto similique error, excepturi earum quam itaque iure adipisci repudiandae nostrum odio dolores quas. Tempora quasi suscipit in. Inventore voluptate pariatur ex ipsa aspernatur minus, temporibus recusandae natus quisquam hic, perspiciatis necessitatibus, modi quae delectus veniam in nostrum soluta placeat rerum mollitia blanditiis? Hic corrupti assumenda incidunt consequuntur omnis alias nulla culpa debitis recusandae cum autem nesciunt quisquam delectus, velit quo soluta placeat error praesentium at totam, distinctio ad magnam commodi. Asperiores, rem? Aliquam omnis dignissimos molestiae maxime magnam maiores dolores, repellendus officia ipsum deserunt necessitatibus molestias dolore delectus rem aspernatur. Quos numquam pariatur soluta, laboriosam aut voluptate amet quasi commodi? Illo, laborum sequi!</div>
-  )
-}
+    const theme = useTheme();
 
-export default MainSection
+    return (
+        <Maincontainer>
+            <GridContainer container spacing={2}>
+                <GridItem item xs={12} sm={6}>
+                    <ImageContainer>{/* <img src={section1} alt="" /> */}</ImageContainer>
+                </GridItem>
+                <GridItem item xs={12} sm={6}>
+                    <TextContainer>
+                        <Titles>
+                            <Typography
+                                sx={{
+                                    fontSize: "48px",
+                                    // background:'red',
+                                    maxWidth: "478px",
+                                    lineHeight: "60px",
+                                    fontWeight: 800,
+                                    color: `${theme.palette.primary.contrastText}`,
+                                }}
+                            >
+                                MEAL PLAN WITH LAZAROT STORE
+                            </Typography>
+                            <Typography
+                                sx={{
+                                    fontSize: "16px",
+                                    fontWeight: 400,
+                                    lineHeight: "24px",
+                                    color: `${theme.palette.primary.contrastText}`,
+                                }}
+                            >
+                                MAKING THE MOST OF YOUR GROCERY
+                            </Typography>
+                        </Titles>
+                        <Buttons></Buttons>
+                        {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet fugit, soluta eaque quae cum ratione enim? Reprehenderit vel incidunt cupiditate eum excepturi dicta expedita quo unde similique, a ex vitae magnam sunt quia accusamus id, esse dolorem quae modi maxime architecto quod aperiam laboriosam. Quaerat dolores corporis error quasi, consequuntur ipsam! */}
+                    </TextContainer>
+                </GridItem>
+            </GridContainer>
+        </Maincontainer>
+    );
+};
+
+export default MainSection;
