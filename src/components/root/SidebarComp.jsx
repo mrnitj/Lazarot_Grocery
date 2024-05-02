@@ -82,7 +82,7 @@ export default function SidebarComp() {
     };
 
     return (
-        <Box sx={{ display: "flex", width: "100%", height:"auto" }}>
+        <Box sx={{ display: "flex", width: "100%", height: "auto" }}>
             <Drawer variant="permanent" open={open}>
                 <List disablePadding sx={{ padding: "0" }}>
                     <ListItem>
@@ -295,7 +295,7 @@ export default function SidebarComp() {
                 </List>
             </Drawer>
 
-            <Box component="main" sx={{ flex: 1, p: 3, background: "",height:'auto' }}>
+            <Box component="main" sx={{ flex: 1, p: 3, background: "", height: "auto" }}>
                 {activeComponent === "UserHome" ? <UserHome /> : activeComponent === "Cart" ? <Cart /> : "hi"}
             </Box>
         </Box>

@@ -10,6 +10,7 @@ const Maincontainer = styled(Box)(({ theme }) => ({}));
 const GridContainer = styled(Grid)(({ theme }) => ({}));
 const GridItem = styled(Grid)(({ theme }) => ({}));
 const ImageContainer = styled(Box)(({ theme }) => ({
+    borderRadius: "10px",
     height: "242px",
     background: `url(${section11})`,
     backgroundSize: "cover",
@@ -26,7 +27,35 @@ const TextContainer = styled(Box)(({ theme }) => ({
     height: "242px",
 }));
 const Titles = styled(Box)(({ theme }) => ({}));
-const Buttons = styled(Box)(({ theme }) => ({}));
+const Buttons = styled(Box)(({ theme }) => ({
+    display: "flex",
+    gap: "11.5px",
+    marginTop: "32px",
+    [theme.breakpoints.down("md")]: {
+        marginTop: "25px",
+    },
+    [theme.breakpoints.down("sm")]: {
+        marginTop: "15px",
+    },
+}));
+const Button = styled(Box)(({ theme }) => ({
+    fontFamily: "Plus Jakarta Sans",
+    fontSize: "16px",
+    fontWeight: 700,
+    lineHeight: "24px",
+    letterSpacing: "0.24px",
+    padding: "12px 20px",
+    borderRadius: "50px",
+    cursor: "pointer",
+    [theme.breakpoints.down("lg")]: {
+        fontSize: "15px",
+    },
+
+    [theme.breakpoints.down("sm")]: {
+        fontSize: "12px",
+        padding: "10px 18px",
+    },
+}));
 
 const MainSection = () => {
     const theme = useTheme();
@@ -42,10 +71,11 @@ const MainSection = () => {
                         <Titles>
                             <Typography
                                 sx={{
-                                    fontSize: "48px",
+                                    fontSize: { xs: "27px", sm: "44px", lg: "48px" },
+
                                     // background:'red',
                                     maxWidth: "478px",
-                                    lineHeight: "60px",
+                                    lineHeight: { sm: "53px", lg: "60px" },
                                     fontWeight: 800,
                                     color: `${theme.palette.primary.contrastText}`,
                                 }}
@@ -54,17 +84,33 @@ const MainSection = () => {
                             </Typography>
                             <Typography
                                 sx={{
-                                    fontSize: "16px",
+                                    fontSize: { xs: "12px", sm: "14px", lg: "16px" },
                                     fontWeight: 400,
-                                    lineHeight: "24px",
+                                    lineHeight: { xs: "25px", sm: "24px" },
                                     color: `${theme.palette.primary.contrastText}`,
                                 }}
                             >
                                 MAKING THE MOST OF YOUR GROCERY
                             </Typography>
                         </Titles>
-                        <Buttons></Buttons>
-                        {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet fugit, soluta eaque quae cum ratione enim? Reprehenderit vel incidunt cupiditate eum excepturi dicta expedita quo unde similique, a ex vitae magnam sunt quia accusamus id, esse dolorem quae modi maxime architecto quod aperiam laboriosam. Quaerat dolores corporis error quasi, consequuntur ipsam! */}
+                        <Buttons>
+                            <Button
+                                sx={{
+                                    backgroundColor: `${theme.palette.success.main}`,
+                                    color: `${theme.palette.primary.main}`,
+                                }}
+                            >
+                                Start Shopping
+                            </Button>
+                            <Button
+                                sx={{
+                                    backgroundColor: `${theme.palette.secondary.main}`,
+                                    color: `${theme.palette.primary.contrastText}`,
+                                }}
+                            >
+                                Weekly Deals
+                            </Button>
+                        </Buttons>
                     </TextContainer>
                 </GridItem>
             </GridContainer>
