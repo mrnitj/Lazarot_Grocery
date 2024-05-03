@@ -1,11 +1,16 @@
 import { Box, Grid, Typography, styled } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
-
+import { PiHamburger } from "react-icons/pi";
+import { LuUnlink } from "react-icons/lu";
+import { PiCoffeeLight } from "react-icons/pi";
+import { PiBeerBottle } from "react-icons/pi";
+import { GiFruitBowl } from "react-icons/gi";
+import { GiBrandyBottle } from "react-icons/gi";
+import { LuDessert } from "react-icons/lu";
 // images-------
 import section11 from "../../../assets/User/section11.png";
 import section1 from "../../../assets/User/section1.png";
-import { Coffee } from "@mui/icons-material";
 
 const Maincontainer = styled(Box)(({ theme }) => ({}));
 const GridContainer = styled(Grid)(({ theme }) => ({
@@ -78,13 +83,16 @@ const SliderSubContiner = styled(Box)(({ theme }) => ({
 const Chips = styled(Box)(({ theme }) => ({
     height: "32px",
     width: "fit-content",
-    color: "white",
-    background: "#1F1F1F",
+    color: theme.palette.primary.contrastText,
+    background: theme.palette.secondary.main,
     display: "flex",
     alignItems: "center",
     borderRadius: "50px",
     padding: "5px 16px",
     gap: "5px",
+    fontWeight:700,
+    lineHeight:'21px',
+    fontFamily:"Plus Jakarta Sans"
 }));
 
 const MainSection = () => {
@@ -147,32 +155,32 @@ const MainSection = () => {
             <SliderContainer>
                 <SliderSubContiner>
                     <Chips>
-                        <Coffee sx={{ fontSize: "18px" }} />
-                        <Typography sx={{ fontSize: "14px" }}>Coffee</Typography>
+                        <PiHamburger sx={{ fontSize: "18px" }} />
+                        <Typography sx={{ fontSize: "14px" }}>Snacks</Typography>
                     </Chips>
                     <Chips>
-                        <Coffee sx={{ fontSize: "18px" }} />
-                        <Typography sx={{ fontSize: "14px" }}>Coffee</Typography>
+                        <LuUnlink sx={{ fontSize: "18px" }} />
+                        <Typography sx={{ fontSize: "14px" }}>Breakfast</Typography>
                     </Chips>
                     <Chips>
-                        <Coffee sx={{ fontSize: "18px" }} />
-                        <Typography sx={{ fontSize: "14px" }}>Coffee</Typography>
+                        <PiCoffeeLight sx={{ fontSize: "18px" }} />
+                        <Typography sx={{ fontSize: "14px" }}>Drinks</Typography>
                     </Chips>
                     <Chips>
-                        <Coffee sx={{ fontSize: "18px" }} />
-                        <Typography sx={{ fontSize: "14px" }}>Coffee</Typography>
+                        <PiBeerBottle sx={{ fontSize: "18px" }} />
+                        <Typography sx={{ fontSize: "14px" }}>Dinner</Typography>
                     </Chips>
                     <Chips>
-                        <Coffee sx={{ fontSize: "18px" }} />
-                        <Typography sx={{ fontSize: "14px" }}>Coffee</Typography>
+                        <LuDessert sx={{ fontSize: "18px" }} />
+                        <Typography sx={{ fontSize: "14px" }}>Dessert</Typography>
                     </Chips>
                     <Chips>
-                        <Coffee sx={{ fontSize: "18px" }} />
-                        <Typography sx={{ fontSize: "14px" }}>Coffee</Typography>
+                        <GiFruitBowl sx={{ fontSize: "18px" }} />
+                        <Typography sx={{ fontSize: "14px" }}>Fruits</Typography>
                     </Chips>
                     <Chips>
-                        <Coffee sx={{ fontSize: "18px" }} />
-                        <Typography sx={{ fontSize: "14px" }}>Coffee</Typography>
+                        <GiBrandyBottle sx={{ fontSize: "18px" }} />
+                        <Typography sx={{ fontSize: "14px" }}>Sauce</Typography>
                     </Chips>
                 </SliderSubContiner>
             </SliderContainer>
