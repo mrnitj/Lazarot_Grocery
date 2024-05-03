@@ -71,8 +71,7 @@ const SliderContainer = styled(Box)(({ theme }) => ({
     overflowX: "auto",
     padding: "12px 0",
     width: "100%",
-    marginTop:'20px'
-
+    marginTop: "20px",
 }));
 const SliderSubContiner = styled(Box)(({ theme }) => ({
     // background: "grey",
@@ -90,9 +89,9 @@ const Chips = styled(Box)(({ theme }) => ({
     borderRadius: "50px",
     padding: "5px 16px",
     gap: "5px",
-    fontWeight:700,
-    lineHeight:'21px',
-    fontFamily:"Plus Jakarta Sans"
+    fontWeight: 700,
+    lineHeight: "21px",
+    fontFamily: "Plus Jakarta Sans",
 }));
 
 const MainSection = () => {

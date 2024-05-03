@@ -21,7 +21,7 @@ const UserPage = () => {
             </Box>
             <Subcontainer>
                 <Box sx={{width:'100%' ,display:{xs:'none', md:'block'}}}><SidebarComp/></Box>
-                <Box sx={{width:'100%', display:{xs:'block', md:'none'}}}><UserHome/></Box>
+                <Box sx={{width:'100%', display:{xs:'block', md:'none'}, padding:'8px'}}><UserHome/></Box>
                 {/* <SidebarComp/> */}
                 {/* <UserHome/> */}
                 {/* hi */}
