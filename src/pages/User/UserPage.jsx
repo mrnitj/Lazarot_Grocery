@@ -3,7 +3,7 @@ import React from "react";
 import NavbarComp from "../../components/root/NavbarComp";
 import SidebarComp from "../../components/root/SidebarComp";
 import UserHome from "./UserHome";
-import { useTheme, } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 
 const Maincontainer = styled(Box)(({ theme }) => ({}));
 const Subcontainer = styled(Box)(({ theme }) => ({
@@ -20,11 +20,12 @@ const UserPage = () => {
                 <NavbarComp />
             </Box>
             <Subcontainer>
-                <Box sx={{width:'100%' ,display:{xs:'none', md:'block'}}}><SidebarComp/></Box>
-                <Box sx={{width:'100%', display:{xs:'block', md:'none'}, padding:'8px'}}><UserHome/></Box>
-                {/* <SidebarComp/> */}
-                {/* <UserHome/> */}
-                {/* hi */}
+                <Box sx={{ width: "100%", display: { xs: "none", md: "block" } }}>
+                    <SidebarComp />
+                </Box>
+                <Box sx={{ width: "100%", display: { xs: "block", md: "none" }, padding: "8px" }}>
+                    <UserHome />
+                </Box>
             </Subcontainer>
         </Maincontainer>
     );
