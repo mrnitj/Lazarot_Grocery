@@ -11,9 +11,7 @@ import UserPage from "./pages/User/UserPage";
 const App = () => {
     const { mode, setMode } = useMode();
     useEffect(() => {
-        document.body.style.backgroundColor = mode
-            ? darkTheme.palette.primary.main
-            : lightTheme.palette.primary.main;
+        document.body.style.backgroundColor = mode ? darkTheme.palette.primary.main : lightTheme.palette.primary.main;
     }, [mode]);
 
     return (

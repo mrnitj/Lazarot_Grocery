@@ -8,7 +8,7 @@ export const lightTheme = createTheme({
             contrastText: "#FFFFFF",
         },
         secondary: {
-            main: "#1F1F1F",//search
+            main: "#1F1F1F", //search
             light: "#333333",
             contrastText: "#FFFFFF",
         },
@@ -21,7 +21,6 @@ export const lightTheme = createTheme({
             contrastText: "#0D0D0D",
         },
     },
-  
 });
 
 export const darkTheme = createTheme({
@@ -45,5 +44,4 @@ export const darkTheme = createTheme({
             contrastText: "#FFFFFF",
         },
     },
-    
 });
