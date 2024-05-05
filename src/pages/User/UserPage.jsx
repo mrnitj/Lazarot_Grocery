@@ -9,7 +9,7 @@ const Maincontainer = styled(Box)(({ theme }) => ({}));
 const Subcontainer = styled(Box)(({ theme }) => ({
     display: "flex",
 }));
-const HomepageContent = styled(Box)(({ theme }) => ({}));
+// const HomepageContent = styled(Box)(({ theme }) => ({}));
 
 const UserPage = () => {
     const theme = useTheme();
