@@ -23,7 +23,12 @@ import {useTheme}from "@mui/material/styles"
 const MainContainer = styled(Box)(({ theme }) => ({
     width: "100%",
     overflowX: "hidden",
-    padding:'0 10px'
+    padding:'0 10px',
+    marginTop:'15px',
+    [theme.breakpoints.up('sm')]:{
+        marginTop:'10px'
+    }
+    
 }));
 const SubContainer = styled(Box)(({ theme }) => ({}));
 const SwiperContent = styled(Box)(({ theme }) => ({
