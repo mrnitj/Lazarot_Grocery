@@ -3,6 +3,8 @@ import React from "react";
 import NavbarComp from "../../components/root/NavbarComp";
 import SidebarComp from "../../components/root/SidebarComp";
 import UserHome from "./UserHome";
+import AutoSliderSection from "../../components/User/Home/AutoSliderSection";
+
 import { useTheme } from "@mui/material/styles";
 
 const Maincontainer = styled(Box)(({ theme }) => ({}));
@@ -25,6 +27,7 @@ const UserPage = () => {
                 </Box>
                 <Box sx={{ width: "100%", display: { xs: "block", md: "none" }, padding: "8px" }}>
                     <UserHome />
+                    {/* <AutoSliderSection/> */}
                 </Box>
             </Subcontainer>
         </Maincontainer>
