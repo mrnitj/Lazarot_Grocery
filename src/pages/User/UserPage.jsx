@@ -15,7 +15,6 @@ const Subcontainer = styled(Box)(({ theme }) => ({
 
 const UserPage = () => {
     const theme = useTheme();
-    console.log(theme.breakpoints.down("sm"));
     return (
         <Maincontainer>
             <Box sx={{ position: "sticky", top: "0" }}>

@@ -25,6 +25,7 @@ const MainContainer = styled(Box)(({ theme }) => ({
     overflowX: "hidden",
     padding:'0 10px',
     marginTop:'15px',
+    zIndex:'-1',
     [theme.breakpoints.up('sm')]:{
         marginTop:'10px'
     }
