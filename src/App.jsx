@@ -21,8 +21,8 @@ const App = () => {
                 <Router>
                     <Routes>
                         <Route path="/" element={<UserPage />} />
-                        <Route path="/user/cart" element={<Cart />} />
-                        <Route path="/user/products" element={<Products />} />
+                        <Route path="/cart" element={<Cart />} />
+                        <Route path="/products" element={<Products />} />
                     </Routes>
                 </Router>
             </ThemeProvider>

@@ -311,7 +311,7 @@ const NavbarComp = () => {
                                                 fontWeight: "700",
                                             }}
                                             startIcon={<ShoppingCartOutlinedIcon sx={{ fontSize: "24px !important" }} />}
-                                            onClick={() => navigate("/user/products")}
+                                            onClick={() => navigate("/products")}
                                         >
                                             {" "}
                                             Prouducts
