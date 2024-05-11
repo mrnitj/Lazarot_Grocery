@@ -64,9 +64,7 @@ const Search = styled(Box)(({ theme }) => ({
     padding: "0 1rem",
     margin:'0 auto',
     zIndex:1,
-    [theme.breakpoints.down("sm")]: {
-        display: "none",
-    },
+    
 }));
 
 const ProductCard = () => {
