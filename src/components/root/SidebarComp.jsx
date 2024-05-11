@@ -85,7 +85,7 @@ export default function SidebarComp() {
 
     return (
         <>
-            <Box sx={{ position: "sticky", top: "0" }}>
+            <Box sx={{ position: "sticky", top: "0",zIndex:99 }}>
                 <NavbarComp />
             </Box>
             <Box sx={{ display: "flex", width: "100%", height: "auto" }}>

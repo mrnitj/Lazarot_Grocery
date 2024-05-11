@@ -19,49 +19,49 @@ import almondmilk from "../../../assets/User/products/newArrivals/almondmilk.png
 
 export const AutoslideImages = [
     {
-        id: 1,
+        id: Math.random() + Date.now(),
         image: hudsonsauce,
         title: "Hudson Sauce",
         price: "$8.92",
     },
     {
-        id: 2,
+        id: Math.random() + Date.now(),
         image: avacado,
         title: "Hass Avocado",
         price: "$4.92",
     },
     {
-        id: 3,
+        id: Math.random() + Date.now(),
         image: eggs,
         title: "6 eggs",
         price: "$8.92",
     },
     {
-        id: 4,
+        id: Math.random() + Date.now(),
         image: mixednuts,
         title: "Mixed Nuts",
         price: "$3.01",
     },
     {
-        id: 5,
+        id: Math.random() + Date.now(),
         image: ice_cream,
         title: "Ice-cream",
         price: "$3.01",
     },
     {
-        id: 6,
+        id: Math.random() + Date.now(),
         image: pasta,
         title: "Pasta",
         price: "$4.92",
     },
     {
-        id: 7,
+        id: Math.random() + Date.now(),
         image: spinach,
         title: "Spinach",
         price: "$8.92",
     },
     {
-        id: 8,
+        id: Math.random() + Date.now(),
         image: burger,
         title: "Burger",
         price: "$8.92",
@@ -70,25 +70,25 @@ export const AutoslideImages = [
 
 export const NewArrivalsDatas = [
     {
-        id: 1,
+        id: Math.random() + Date.now(),
         img1: fish,
         img2: butter,
         img3: apple,
     },
     {
-        id: 2,
+        id: Math.random() + Date.now(),
         img1: carrots,
         img2: pesto,
         img3: eggs,
     },
     {
-        id: 3,
+        id: Math.random() + Date.now(),
         img1: berries,
         img2: breads,
         img3: almondmilk,
     },
     {
-        id: 4,
+        id: Math.random() + Date.now(),
         img1: berries,
         img2: breads,
         img3: almondmilk,
@@ -96,56 +96,56 @@ export const NewArrivalsDatas = [
 ];
 export const NewArrivalsDatasMobile = [
     {
-        id: 1,
+        id: Math.random() + Date.now(),
         image: fish,
         title: "Fish",
         price: "$8.2",
     },
     {
-        id: 2,
+        id: Math.random() + Date.now(),
         image: butter,
         title: "Butter",
         price: "$3.5",
     },
     {
-        id: 3,
+        id: Math.random() + Date.now(),
         image: apple,
         title: "Apples",
         price: "$3.5",
     },
     {
-        id: 4,
+        id: Math.random() + Date.now(),
         image: carrots,
         title: "Carrots",
         price: "$2.2",
     },
     {
-        id: 5,
+        id: Math.random() + Date.now(),
         image: pesto,
         title: "Pesto",
         price: "$5.45",
     },
     {
-        id: 6,
+        id: Math.random() + Date.now(),
         image: eggs,
         title: "6 eggs",
         price: "$8.92",
     },
     {
-        id: 7,
+        id: Math.random() + Date.now(),
         image: berries,
         title: "Fresh Berries",
         price: "$4.50",
     },
 
     {
-        id: 8,
+        id: Math.random() + Date.now(),
         image: breads,
         title: "Whole Grain Bread",
         price: "$2.75",
     },
     {
-        id: 9,
+        id: Math.random() + Date.now(),
         image: almondmilk,
         title: "Almond Milk",
         price: "$3.45",
@@ -153,3 +153,5 @@ export const NewArrivalsDatasMobile = [
 
  
 ];
+
+export const productDatas = [...AutoslideImages,...NewArrivalsDatasMobile]

@@ -9,11 +9,10 @@ import { Box, Card, Grid, InputBase, Typography, styled } from "@mui/material";
 
 const MainContainer = styled(Box)(({ theme }) => ({
     padding: "1rem 0",
-    display:'flex',
-    flexDirection:'column',
-    gap:'1rem'
-
-
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
+    zIndex: 1,
 }));
 // const SubContainer = styled(Box)(({theme})=>({}))
 // const GridContainer = styled(Grid)(({theme})=>({}))
@@ -62,12 +61,13 @@ const Search = styled(Box)(({ theme }) => ({
     alignItems: "center",
     gap: "1rem",
     padding: "0 1rem",
-    margin:'0 auto',
-    zIndex:1,
-    
+    margin: "0 auto",
+    zIndex: 1,
 }));
 
-const ProductCard = () => {
+const ProductCard = ({ productDatas }) => {
+    console.log("productz", productDatas);
+
     return (
         <MainContainer>
             <Search>
@@ -77,61 +77,13 @@ const ProductCard = () => {
                 <InputBase placeholder="Search..." />
             </Search>
             <Cards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
-                <ProductCards>
-                    <img src={fish} alt="" style={{ width: "100%", borderRadius: "20px" }} />
-                    <CardTitle>title</CardTitle>
-                    <CardPrice>$99</CardPrice>
-                </ProductCards>
+                {productDatas.map((item) => (
+                    <ProductCards key={item.id}>
+                        <img src={item.image} alt="" style={{ width: "100%", borderRadius: "20px" }} />
+                        <CardTitle>{item.title}</CardTitle>
+                        <CardPrice>{item.price}</CardPrice>
+                    </ProductCards>
+                ))}
             </Cards>
         </MainContainer>
     );
