@@ -112,23 +112,21 @@ const Right_Section = styled(Box)({
 const Avatars = styled(Avatar)(({ theme }) => ({
     cursor: "pointer",
 
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
         display: "none",
     },
 }));
 
-const IconAvatar = styled(Avatar)(({theme})=>({
-
-    display:'flex',
-    [theme.breakpoints.down("sm")]: {
+const IconAvatar = styled(Avatar)(({ theme }) => ({
+    display: "flex",
+    [theme.breakpoints.down("md")]: {
         display: "none",
     },
-}))
+}));
 
 const IconButtons = styled(Box)(({ theme }) => ({
     display: "none",
-
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
         display: "block",
     },
 }));
@@ -147,9 +145,8 @@ const SearchBox = styled(Box)(({ theme }) => ({
 }));
 
 const NavbarComp = () => {
-    
-    const navigate = useNavigate()
-    
+    const navigate = useNavigate();
+
     const { mode, setMode, setModeFalse, setModeTrue } = useMode();
     const [searchBoxVisible, setSearchBoxVisible] = useState(false);
 
@@ -208,7 +205,7 @@ const NavbarComp = () => {
                         </Search2>
                     </Left_Section>
                     <Right_Section>
-                        <IconAvatar onClick={setMode} sx={{ bgcolor: `${theme.palette.secondary.light}`}}>
+                        <IconAvatar onClick={setMode} sx={{ bgcolor: `${theme.palette.secondary.light}` }}>
                             {mode ? (
                                 <DarkModeOutlinedIcon sx={{ color: `${theme.palette.secondary.contrastText}` }} />
                             ) : (
@@ -228,7 +225,7 @@ const NavbarComp = () => {
                 </Toolbrs>
             </Maincontainer>
 
-            <Box sx={{ display: { xs: "block", sm: "none" } }}>
+            <Box>
                 <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: searchBoxVisible ? 1 : 0, y: searchBoxVisible ? 0 : -10 }}
@@ -299,12 +296,13 @@ const NavbarComp = () => {
                                                 fontWeight: "700",
                                             }}
                                             startIcon={<ShoppingCartOutlinedIcon sx={{ fontSize: "24px !important" }} />}
+                                            onClick={() => navigate("/")}
                                         >
                                             {" "}
-                                            cart
+                                            Home
                                         </Button>
                                     </ListItem>
-                                    <Divider sx={{background:`${theme.palette.primary.contrastText}`,}}/>
+                                    <Divider sx={{ background: `${theme.palette.primary.contrastText}` }} />
                                     <ListItem>
                                         <Button
                                             sx={{
@@ -313,7 +311,7 @@ const NavbarComp = () => {
                                                 fontWeight: "700",
                                             }}
                                             startIcon={<ShoppingCartOutlinedIcon sx={{ fontSize: "24px !important" }} />}
-                                            onClick={()=>navigate('/user/products')}
+                                            onClick={() => navigate("/user/products")}
                                         >
                                             {" "}
                                             Prouducts

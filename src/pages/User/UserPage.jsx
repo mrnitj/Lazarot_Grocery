@@ -17,7 +17,7 @@ const UserPage = () => {
     const theme = useTheme();
     return (
         <Maincontainer>
-            <Box sx={{ position: "sticky", top: "0" }}>
+            <Box sx={{ position: "sticky", top: "0", display: { xs: "block", md: "none" } }}>
                 <NavbarComp />
             </Box>
             <Subcontainer>
