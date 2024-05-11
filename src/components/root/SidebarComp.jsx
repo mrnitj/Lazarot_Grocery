@@ -19,6 +19,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { RiAccountCircleLine } from "react-icons/ri";
 // ----------------
 import logo from "../../assets/User/logo.png";
+import Products from "../../pages/User/Products";
 
 const drawerWidth = 240;
 
@@ -159,14 +160,15 @@ export default function SidebarComp() {
                     </ListItem>
                     <ListItem sx={{ padding: "0px 16px" }}>
                         <ListItemButton
-                            onClick={() => handleComponentChange("Cart")}
+                            onClick={() => handleComponentChange("Products")}
                             sx={{
                                 height: 48,
                                 justifyContent: open ? "initial" : "center",
                                 overflow: "hidden",
                                 borderRadius: "50px",
                                 padding: "4px 20px",
-                                backgroundColor: activeComponent === "Cart" ? theme.palette.secondary.main : "transparent",
+                                backgroundColor:
+                                    activeComponent === "Products" ? theme.palette.secondary.main : "transparent",
                             }}
                         >
                             <ListItemIcon
@@ -227,14 +229,15 @@ export default function SidebarComp() {
 
                     <ListItem sx={{ padding: "0px 16px" }}>
                         <ListItemButton
-                            onClick={() => handleComponentChange("Cart")}
+                            onClick={() => handleComponentChange("ContactUs")}
                             sx={{
                                 height: 48,
                                 justifyContent: open ? "initial" : "center",
                                 overflow: "hidden",
                                 borderRadius: "50px",
                                 padding: "4px 20px",
-                                backgroundColor: activeComponent === "Cart" ? theme.palette.secondary.main : "transparent",
+                                backgroundColor:
+                                    activeComponent === "ContactUs" ? theme.palette.secondary.main : "transparent",
                             }}
                         >
                             <ListItemIcon
@@ -261,14 +264,15 @@ export default function SidebarComp() {
 
                     <ListItem sx={{ padding: "0px 16px" }}>
                         <ListItemButton
-                            onClick={() => handleComponentChange("Cart")}
+                            onClick={() => handleComponentChange("Account")}
                             sx={{
                                 height: 48,
                                 justifyContent: open ? "initial" : "center",
                                 overflow: "hidden",
                                 borderRadius: "50px",
                                 padding: "4px 20px",
-                                backgroundColor: activeComponent === "Cart" ? theme.palette.secondary.main : "transparent",
+                                backgroundColor:
+                                    activeComponent === "Account" ? theme.palette.secondary.main : "transparent",
                             }}
                         >
                             <ListItemIcon
@@ -296,7 +300,15 @@ export default function SidebarComp() {
             </Drawer>
 
             <Box component="main" sx={{ flex: 1, p: 3, background: "", height: "auto" }}>
-                {activeComponent === "UserHome" ? <UserHome /> : activeComponent === "Cart" ? <Cart /> : "hi"}
+                {activeComponent === "UserHome" ? (
+                    <UserHome />
+                ) : activeComponent === "Cart" ? (
+                    <Cart />
+                ) : activeComponent === "Products" ? (
+                    <Products />
+                ) : (
+                    "hi"
+                )}
             </Box>
         </Box>
     );

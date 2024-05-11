@@ -1,7 +1,16 @@
 import React from "react";
 
+// mui import -----------------
+import { Box, styled } from "@mui/material";
+// mui import -----------------
+
+
+const MainContainer = styled(Box)(({theme})=>({
+
+}))
+
 const Cart = () => {
-    return <div>Cart</div>;
+    return <MainContainer>Cart</MainContainer>;
 };
 
 export default Cart;

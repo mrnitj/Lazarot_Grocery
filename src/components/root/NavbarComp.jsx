@@ -22,6 +22,7 @@ import {
     Tabs,
     Tab,
     Button,
+    Divider,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
@@ -36,6 +37,7 @@ import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
 
 const Maincontainer = styled(AppBar)(({ theme }) => ({
     padding: "0",
@@ -115,6 +117,14 @@ const Avatars = styled(Avatar)(({ theme }) => ({
     },
 }));
 
+const IconAvatar = styled(Avatar)(({theme})=>({
+
+    display:'flex',
+    [theme.breakpoints.down("sm")]: {
+        display: "none",
+    },
+}))
+
 const IconButtons = styled(Box)(({ theme }) => ({
     display: "none",
 
@@ -137,6 +147,9 @@ const SearchBox = styled(Box)(({ theme }) => ({
 }));
 
 const NavbarComp = () => {
+    
+    const navigate = useNavigate()
+    
     const { mode, setMode, setModeFalse, setModeTrue } = useMode();
     const [searchBoxVisible, setSearchBoxVisible] = useState(false);
 
@@ -195,22 +208,22 @@ const NavbarComp = () => {
                         </Search2>
                     </Left_Section>
                     <Right_Section>
-                        <Avatar onClick={setMode} sx={{ bgcolor: `${theme.palette.secondary.light}` }}>
+                        <IconAvatar onClick={setMode} sx={{ bgcolor: `${theme.palette.secondary.light}`}}>
                             {mode ? (
                                 <DarkModeOutlinedIcon sx={{ color: `${theme.palette.secondary.contrastText}` }} />
                             ) : (
                                 <LightModeOutlinedIcon sx={{ color: `${theme.palette.secondary.contrastText}` }} />
                             )}
-                        </Avatar>
+                        </IconAvatar>
                         <Avatars sx={{ bgcolor: `${theme.palette.secondary.light}` }}>
                             <ShoppingCartOutlinedIcon sx={{ color: `${theme.palette.secondary.contrastText}` }} />
                         </Avatars>
                         <Avatar>
                             <img src={profile} alt="profile" />
                         </Avatar>
-                        {/* <IconButtons onClick={handleOpen}>
+                        <IconButtons onClick={handleOpen}>
                             <MenuIcon sx={{ color: `${mode ? "#191716" : "white"}`, fontSize: "30px" }} />
-                        </IconButtons> */}
+                        </IconButtons>
                     </Right_Section>
                 </Toolbrs>
             </Maincontainer>
@@ -237,7 +250,7 @@ const NavbarComp = () => {
                 </motion.div>
 
                 {/* -----------sidebar---------------- */}
-                {/* <Slide direction="left" in={open} mountOnEnter unmountOnExit>
+                <Slide direction="left" in={open} mountOnEnter unmountOnExit>
                     <Paper
                         elevation={3}
                         sx={{
@@ -291,11 +304,26 @@ const NavbarComp = () => {
                                             cart
                                         </Button>
                                     </ListItem>
+                                    <Divider sx={{background:`${theme.palette.primary.contrastText}`,}}/>
+                                    <ListItem>
+                                        <Button
+                                            sx={{
+                                                color: `${mode ? "black" : "white"}`,
+                                                fontSize: "19px",
+                                                fontWeight: "700",
+                                            }}
+                                            startIcon={<ShoppingCartOutlinedIcon sx={{ fontSize: "24px !important" }} />}
+                                            onClick={()=>navigate('/user/products')}
+                                        >
+                                            {" "}
+                                            Prouducts
+                                        </Button>
+                                    </ListItem>
                                 </List>
                             </Box>
                         </Box>
                     </Paper>
-                </Slide> */}
+                </Slide>
                 {/* -------sidebar--------- */}
             </Box>
         </>
