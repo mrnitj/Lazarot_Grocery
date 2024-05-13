@@ -44,7 +44,6 @@ const SubImage = styled(Box)(({ theme }) => ({
 }));
 
 const NewArrivals = ({ NewArrivalsDatas }) => {
-
     return (
         <MainContainer>
             <MainTitle>New Arrivals</MainTitle>
@@ -53,7 +52,7 @@ const NewArrivals = ({ NewArrivalsDatas }) => {
                     style={{
                         width: "1000px",
                         margin: "0",
-                        cursor:'grab'
+                        cursor: "grab",
                     }}
                     spaceBetween={10}
                     slidesPerView={1.5}

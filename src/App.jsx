@@ -8,6 +8,7 @@ import { useMode } from "./store/mode-store";
 import { lightTheme, darkTheme } from "./theme";
 import UserPage from "./pages/User/UserPage";
 import Products from "./pages/User/Products";
+import ProductView from "./pages/User/ProductView";
 
 const App = () => {
     const { mode, setMode } = useMode();
@@ -23,6 +24,7 @@ const App = () => {
                         <Route path="/" element={<UserPage />} />
                         <Route path="/cart" element={<Cart />} />
                         <Route path="/products" element={<Products />} />
+                        <Route path="/products/view/:id" element={<ProductView />} />
                     </Routes>
                 </Router>
             </ThemeProvider>

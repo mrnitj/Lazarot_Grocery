@@ -7,13 +7,12 @@ const MainContainer = styled(Box)(({ theme }) => ({}));
 const SubContainer = styled(Box)(({ theme }) => ({}));
 
 const Products = () => {
-
     return (
         <MainContainer>
             <Box sx={{ position: "sticky", top: "0", display: { xs: "block", md: "none" }, zIndex: 9 }}>
                 <NavbarForSinglePage />
             </Box>
-            <ProductCard productDatas={productDatas}/>
+            <ProductCard productDatas={productDatas} />
         </MainContainer>
     );
 };

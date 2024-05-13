@@ -5,6 +5,7 @@ import searchIcon from "../../../assets/User/search.png";
 
 // mui imports -------------
 import { Box, Card, Grid, InputBase, Typography, styled } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 // mui imports -------------
 
 const MainContainer = styled(Box)(({ theme }) => ({
@@ -73,6 +74,9 @@ const Search = styled(Box)(({ theme }) => ({
 }));
 
 const ProductCard = ({ productDatas }) => {
+
+    const navigate = useNavigate()
+
     console.log("productz", productDatas);
 
     return (
@@ -85,7 +89,7 @@ const ProductCard = ({ productDatas }) => {
             </Search>
             <Cards>
                 {productDatas.map((item) => (
-                    <ProductCards key={item.id}>
+                    <ProductCards key={item.id} onClick={()=>navigate(`/products/view/${item.id}`)}>
                         <img src={item.image} alt="" style={{ width: "100%", borderRadius: "20px" }} />
                         <CardTitle>{item.title}</CardTitle>
                         <CardPrice>{item.price}</CardPrice>

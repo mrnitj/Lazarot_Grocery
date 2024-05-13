@@ -150,8 +150,6 @@ export const NewArrivalsDatasMobile = [
         title: "Almond Milk",
         price: "$3.45",
     },
-
- 
 ];
 
-export const productDatas = [...AutoslideImages,...NewArrivalsDatasMobile]
+export const productDatas = [...AutoslideImages, ...NewArrivalsDatasMobile];

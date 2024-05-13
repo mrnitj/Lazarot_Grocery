@@ -20,11 +20,11 @@ const UserHome = () => {
     return (
         <Maincontainer>
             <MainSection />
-            <AutoSliderSection  />
-            <Box sx={{display:{xs:'none', sm:'block' , width:'100%', overflowX:'hidden'}}}>
+            <AutoSliderSection />
+            <Box sx={{ display: { xs: "none", sm: "block", width: "100%", overflowX: "hidden" } }}>
                 <NewArrivals NewArrivalsDatas={NewArrivalsDatas} />
             </Box>
-            <Box sx={{display:{xs:'block', sm:'none'}}}>
+            <Box sx={{ display: { xs: "block", sm: "none" } }}>
                 <NewArrivalsMobile NewArrivalsDatasMobile={NewArrivalsDatasMobile} />
             </Box>
         </Maincontainer>
