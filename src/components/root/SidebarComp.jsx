@@ -238,7 +238,7 @@ export default function SidebarComp() {
                                         flexDirection: "column",
                                     }}
                                 >
-                                    Cart
+                                    Ca rt
                                 </Typography>
                             </ListItemButton>
                         </ListItem>

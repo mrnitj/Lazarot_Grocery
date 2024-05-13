@@ -8,7 +8,6 @@ import { Box, Grid, IconButton, Rating, Typography, styled } from "@mui/material
 // ------Mui Imports ---------
 import { FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
-import StarIcon from "@mui/icons-material/Star";
 
 const MainContainer = styled(Box)(({ theme }) => ({}));
 const SubContainer = styled(Box)(({ theme }) => ({}));
@@ -98,7 +97,7 @@ const ViewCard = ({ Viewproduct }) => {
                     <GridItem item xs={12} md={3}>
                         <RightSide>
                             <img
-                                src={Viewproduct[0].image}
+                                src={Viewproduct[0]?.image}
                                 alt=""
                                 style={{ height: "300px", width: "100%", borderRadius: "20px", objectFit: "cover" }}
                             />
@@ -110,7 +109,7 @@ const ViewCard = ({ Viewproduct }) => {
                     </GridItem>
                     <GridItem item xs={12} md={6}>
                         <LeftSide>
-                            <Title>{Viewproduct[0].title}</Title>
+                            <Title>{Viewproduct[0]?.title}</Title>
                             <Ratings>
                                 <Rating
                                     name="half-rating"
@@ -123,7 +122,7 @@ const ViewCard = ({ Viewproduct }) => {
                                 <RatingText>9 rating</RatingText>
                             </Ratings>
                             <PriceAndQty>
-                                <Price>{Viewproduct[0].price}</Price>
+                                <Price>{Viewproduct[0]?.price}</Price>
                                 <Quantity>
                                     <QTBtn>
                                         <FaMinus style={{ fontSize: "15px" }} />
