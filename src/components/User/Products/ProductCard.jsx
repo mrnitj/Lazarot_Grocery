@@ -37,18 +37,25 @@ const Cards = styled(Box)(({ theme }) => ({
 const ProductCards = styled(Box)(({ theme }) => ({
     height: "225.2px",
     width: "168.2px",
+    cursor: "pointer",
+    "&:hover": {
+        transform: "scale(1.02)",
+    },
+    "&:active": {
+        transform: "scale(1)",
+    },
 }));
 const CardTitle = styled(Typography)(({ theme }) => ({
-    color: theme.palette.primary.contrastText,
     fontSize: "16px",
     fontWeight: 500,
     lineHeight: "24px",
+    color: theme.palette.primary.contrastText,
 }));
 const CardPrice = styled(Typography)(({ theme }) => ({
-    color: theme.palette.primary.contrastText,
     fontSize: "14px",
     fontWeight: 400,
     lineHeight: "21px",
+    color: theme.palette.text.secondary,
 }));
 
 const Search = styled(Box)(({ theme }) => ({
