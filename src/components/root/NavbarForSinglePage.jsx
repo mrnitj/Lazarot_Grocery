@@ -27,6 +27,10 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
+import { GoHomeFill } from "react-icons/go";
+import { TfiMenuAlt } from "react-icons/tfi";
+import { BsCart3 } from "react-icons/bs";
+
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -208,7 +212,7 @@ const NavbarForSinglePage = () => {
                                             fontSize: "19px",
                                             fontWeight: "700",
                                         }}
-                                        startIcon={<ShoppingCartOutlinedIcon sx={{ fontSize: "24px !important" }} />}
+                                        startIcon={<GoHomeFill sx={{ fontSize: "24px !important" }} />}
                                         onClick={() => navigate("/")}
                                     >
                                         {" "}
@@ -223,11 +227,26 @@ const NavbarForSinglePage = () => {
                                             fontSize: "19px",
                                             fontWeight: "700",
                                         }}
-                                        startIcon={<ShoppingCartOutlinedIcon sx={{ fontSize: "24px !important" }} />}
-                                        onClick={() => navigate("/user/products")}
+                                        startIcon={<TfiMenuAlt sx={{ fontSize: "24px !important" }} />}
+                                        onClick={() => navigate("/products")}
                                     >
                                         {" "}
                                         Prouducts
+                                    </Button>
+                                </ListItem>
+                                <Divider sx={{ background: `${theme.palette.primary.contrastText}` }} />
+                                <ListItem>
+                                    <Button
+                                        sx={{
+                                            color: `${mode ? "black" : "white"}`,
+                                            fontSize: "19px",
+                                            fontWeight: "700",
+                                        }}
+                                        startIcon={<BsCart3 sx={{ fontSize: "24px !important" }} />}
+                                        onClick={() => navigate("/cart")}
+                                    >
+                                        {" "}
+                                        Cart
                                     </Button>
                                 </ListItem>
                             </List>

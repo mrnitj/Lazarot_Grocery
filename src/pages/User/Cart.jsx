@@ -6,10 +6,11 @@ import CartCard from "../../components/User/Cart/CartCard";
 import NavbarComp from "../../components/root/NavbarComp";
 import { useCart } from "../../store/cart-store";
 import CartTotal from "../../components/User/Cart/CartTotal";
+import NavbarForSinglePage from "../../components/root/NavbarForSinglePage";
 // mui import -----------------
 
 const MainContainer = styled(Box)(({ theme }) => ({
-    paddingBottom:'2rem'
+    paddingBottom: "2rem",
 }));
 const Titles = styled(Box)(({ theme }) => ({
     margin: ".5rem 1rem",
@@ -39,7 +40,6 @@ const SubContainer = styled(Box)(({ theme }) => ({
 }));
 const TotalContainer = styled(Box)(({ theme }) => ({
     color: theme.palette.primary.contrastText,
-    
 }));
 
 const Cart = () => {
@@ -47,7 +47,7 @@ const Cart = () => {
     return (
         <MainContainer>
             <Box sx={{ display: { xs: "block", sm: "none" } }}>
-                <NavbarComp />
+                <NavbarForSinglePage />
             </Box>
             <Titles>
                 <MainTitile>Your Cart</MainTitile>
@@ -56,7 +56,9 @@ const Cart = () => {
             <SubContainer>
                 <CartCard cart={cart} removeFromCart={removeFromCart} />
             </SubContainer>
-            <TotalContainer><CartTotal/></TotalContainer>
+            <TotalContainer>
+                <CartTotal />
+            </TotalContainer>
         </MainContainer>
     );
 };
