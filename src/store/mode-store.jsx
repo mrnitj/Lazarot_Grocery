@@ -6,3 +6,4 @@ export const useMode = create((set) => ({
     setModeFalse: () => set({ mode: false }),
     setModeTrue: () => set({ mode: true }),
 }));
+    

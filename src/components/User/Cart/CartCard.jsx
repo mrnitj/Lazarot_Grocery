@@ -10,6 +10,9 @@ import { FaPlus } from "react-icons/fa6";
 const MainContainer = styled(Box)(({ theme }) => ({
     color: theme.palette.primary.contrastText,
     marginTop: "16px",
+    [theme.breakpoints.down("sm")]: {
+        marginTop: "20px",
+    },
 }));
 const SubContainer = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -25,6 +28,8 @@ const GridItem = styled(Grid)(({ theme }) => ({
 const ItemCard = styled(Box)(({ theme }) => ({
     display: "flex",
     gap: "1rem",
+    borderBottom: "1px solid grey",
+    paddingBottom: "10px",
 }));
 const ItemDetails = styled(Box)(({ theme }) => ({}));
 const ItemTitle = styled(Typography)(({ theme }) => ({
@@ -56,148 +61,35 @@ const Count = styled(Box)(({ theme }) => ({
     padding: "0 10px",
 }));
 
-const CartCard = () => {
+const CartCard = ({ cart, removeFromCart }) => {
     return (
         <MainContainer>
             <SubContainer>
-                <ItemCard>
-                    <img src={fish} alt="" style={{ height: "75px", width: "75px", borderRadius: "10px" }} />
-                    <GridContainer container>
-                        <GridItem item xs={12} sm={9}>
-                            <ItemDetails>
-                                <ItemTitle>Fish</ItemTitle>
-                                <ItemDesc>Delicious sauce to complement your meals.</ItemDesc>
-                                <ItemPrice>$8.92</ItemPrice>
-                            </ItemDetails>
-                        </GridItem>
-                        <GridItem item xs={12} sm={3}>
-                            <Quantity>
-                                <Button>
-                                    <FaMinus style={{ fontSize: "15px" }} />
-                                </Button>
-                                <Count>1</Count>
-                                <Button>
-                                    <FaPlus style={{ fontSize: "15px" }} />
-                                </Button>
-                            </Quantity>
-                        </GridItem>
-                    </GridContainer>
-                </ItemCard>
-                <ItemCard>
-                    <img src={fish} alt="" style={{ height: "75px", width: "75px", borderRadius: "10px" }} />
-                    <GridContainer container>
-                        <GridItem item xs={12} sm={9}>
-                            <ItemDetails>
-                                <ItemTitle>Fish</ItemTitle>
-                                <ItemDesc>Delicious sauce to complement your meals.</ItemDesc>
-                                <ItemPrice>$8.92</ItemPrice>
-                            </ItemDetails>
-                        </GridItem>
-                        <GridItem item xs={12} sm={3}>
-                            <Quantity>
-                                <Button>
-                                    <FaMinus style={{ fontSize: "15px" }} />
-                                </Button>
-                                <Count>1</Count>
-                                <Button>
-                                    <FaPlus style={{ fontSize: "15px" }} />
-                                </Button>
-                            </Quantity>
-                        </GridItem>
-                    </GridContainer>
-                </ItemCard>
-                <ItemCard>
-                    <img src={fish} alt="" style={{ height: "75px", width: "75px", borderRadius: "10px" }} />
-                    <GridContainer container>
-                        <GridItem item xs={12} sm={9}>
-                            <ItemDetails>
-                                <ItemTitle>Fish</ItemTitle>
-                                <ItemDesc>Delicious sauce to complement your meals.</ItemDesc>
-                                <ItemPrice>$8.92</ItemPrice>
-                            </ItemDetails>
-                        </GridItem>
-                        <GridItem item xs={12} sm={3}>
-                            <Quantity>
-                                <Button>
-                                    <FaMinus style={{ fontSize: "15px" }} />
-                                </Button>
-                                <Count>1</Count>
-                                <Button>
-                                    <FaPlus style={{ fontSize: "15px" }} />
-                                </Button>
-                            </Quantity>
-                        </GridItem>
-                    </GridContainer>
-                </ItemCard>
-                <ItemCard>
-                    <img src={fish} alt="" style={{ height: "75px", width: "75px", borderRadius: "10px" }} />
-                    <GridContainer container>
-                        <GridItem item xs={12} sm={9}>
-                            <ItemDetails>
-                                <ItemTitle>Fish</ItemTitle>
-                                <ItemDesc>Delicious sauce to complement your meals.</ItemDesc>
-                                <ItemPrice>$8.92</ItemPrice>
-                            </ItemDetails>
-                        </GridItem>
-                        <GridItem item xs={12} sm={3}>
-                            <Quantity>
-                                <Button>
-                                    <FaMinus style={{ fontSize: "15px" }} />
-                                </Button>
-                                <Count>1</Count>
-                                <Button>
-                                    <FaPlus style={{ fontSize: "15px" }} />
-                                </Button>
-                            </Quantity>
-                        </GridItem>
-                    </GridContainer>
-                </ItemCard>
-                <ItemCard>
-                    <img src={fish} alt="" style={{ height: "75px", width: "75px", borderRadius: "10px" }} />
-                    <GridContainer container>
-                        <GridItem item xs={12} sm={9}>
-                            <ItemDetails>
-                                <ItemTitle>Fish</ItemTitle>
-                                <ItemDesc>Delicious sauce to complement your meals.</ItemDesc>
-                                <ItemPrice>$8.92</ItemPrice>
-                            </ItemDetails>
-                        </GridItem>
-                        <GridItem item xs={12} sm={3}>
-                            <Quantity>
-                                <Button>
-                                    <FaMinus style={{ fontSize: "15px" }} />
-                                </Button>
-                                <Count>1</Count>
-                                <Button>
-                                    <FaPlus style={{ fontSize: "15px" }} />
-                                </Button>
-                            </Quantity>
-                        </GridItem>
-                    </GridContainer>
-                </ItemCard>
-                <ItemCard>
-                    <img src={fish} alt="" style={{ height: "75px", width: "75px", borderRadius: "10px" }} />
-                    <GridContainer container>
-                        <GridItem item xs={12} sm={9}>
-                            <ItemDetails>
-                                <ItemTitle>Fish</ItemTitle>
-                                <ItemDesc>Delicious sauce to complement your meals.</ItemDesc>
-                                <ItemPrice>$8.92</ItemPrice>
-                            </ItemDetails>
-                        </GridItem>
-                        <GridItem item xs={12} sm={3}>
-                            <Quantity>
-                                <Button>
-                                    <FaMinus style={{ fontSize: "15px" }} />
-                                </Button>
-                                <Count>1</Count>
-                                <Button>
-                                    <FaPlus style={{ fontSize: "15px" }} />
-                                </Button>
-                            </Quantity>
-                        </GridItem>
-                    </GridContainer>
-                </ItemCard>
+                {cart.map((item) => (
+                    <ItemCard>
+                        <img src={item.image} alt="" style={{ height: "75px", width: "75px", borderRadius: "10px" }} />
+                        <GridContainer container>
+                            <GridItem item xs={12} sm={9}>
+                                <ItemDetails>
+                                    <ItemTitle>{item.title}</ItemTitle>
+                                    <ItemDesc>Delicious sauce to complement your meals.</ItemDesc>
+                                    <ItemPrice>{item.price}</ItemPrice>
+                                </ItemDetails>
+                            </GridItem>
+                            <GridItem item xs={12} sm={3} sx={{ justifyContent: { xs: "flex-end" } }}>
+                                <Quantity>
+                                    <Button>
+                                        <FaMinus style={{ fontSize: "15px" }} />
+                                    </Button>
+                                    <Count>1</Count>
+                                    <Button>
+                                        <FaPlus style={{ fontSize: "15px" }} />
+                                    </Button>
+                                </Quantity>
+                            </GridItem>
+                        </GridContainer>
+                    </ItemCard>
+                ))}
             </SubContainer>
         </MainContainer>
     );

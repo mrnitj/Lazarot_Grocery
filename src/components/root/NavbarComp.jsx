@@ -317,6 +317,21 @@ const NavbarComp = () => {
                                             Prouducts
                                         </Button>
                                     </ListItem>
+                                    <Divider sx={{ background: `${theme.palette.primary.contrastText}` }} />
+                                    <ListItem>
+                                        <Button
+                                            sx={{
+                                                color: `${mode ? "black" : "white"}`,
+                                                fontSize: "19px",
+                                                fontWeight: "700",
+                                            }}
+                                            startIcon={<ShoppingCartOutlinedIcon sx={{ fontSize: "24px !important" }} />}
+                                            onClick={() => navigate("/cart")}
+                                        >
+                                            {" "}
+                                            Cart 
+                                        </Button>
+                                    </ListItem>
                                 </List>
                             </Box>
                         </Box>
