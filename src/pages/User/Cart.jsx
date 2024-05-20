@@ -5,9 +5,12 @@ import { Box, Typography, styled } from "@mui/material";
 import CartCard from "../../components/User/Cart/CartCard";
 import NavbarComp from "../../components/root/NavbarComp";
 import { useCart } from "../../store/cart-store";
+import CartTotal from "../../components/User/Cart/CartTotal";
 // mui import -----------------
 
-const MainContainer = styled(Box)(({ theme }) => ({}));
+const MainContainer = styled(Box)(({ theme }) => ({
+    paddingBottom:'2rem'
+}));
 const Titles = styled(Box)(({ theme }) => ({
     margin: ".5rem 1rem",
 }));
@@ -27,16 +30,23 @@ const SubTitile = styled(Typography)(({ theme }) => ({
 }));
 const SubContainer = styled(Box)(({ theme }) => ({
     padding: "0 5rem",
+    minHeight: "50vh",
+    borderBottom: "1px solid grey",
+    paddingBottom: "1rem",
     [theme.breakpoints.down("sm")]: {
         padding: "0 1rem",
     },
+}));
+const TotalContainer = styled(Box)(({ theme }) => ({
+    color: theme.palette.primary.contrastText,
+    
 }));
 
 const Cart = () => {
     const { cart, removeFromCart, clearCart } = useCart();
     return (
         <MainContainer>
-            <Box sx={{display:{xs:'block', sm:'none'}}}>
+            <Box sx={{ display: { xs: "block", sm: "none" } }}>
                 <NavbarComp />
             </Box>
             <Titles>
@@ -46,6 +56,7 @@ const Cart = () => {
             <SubContainer>
                 <CartCard cart={cart} removeFromCart={removeFromCart} />
             </SubContainer>
+            <TotalContainer><CartTotal/></TotalContainer>
         </MainContainer>
     );
 };
