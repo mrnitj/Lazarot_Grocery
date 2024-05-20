@@ -32,6 +32,10 @@ import profile from "../../assets/User/profile.png";
 
 import searchIcon from "../../assets/User/search.png";
 
+import { GoHomeFill } from "react-icons/go";
+import { TfiMenuAlt } from "react-icons/tfi";
+import { BsCart3 } from "react-icons/bs";
+
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -295,7 +299,7 @@ const NavbarComp = () => {
                                                 fontSize: "19px",
                                                 fontWeight: "700",
                                             }}
-                                            startIcon={<ShoppingCartOutlinedIcon sx={{ fontSize: "24px !important" }} />}
+                                            startIcon={<GoHomeFill sx={{ fontSize: "24px !important" }} />}
                                             onClick={() => navigate("/")}
                                         >
                                             {" "}
@@ -310,7 +314,7 @@ const NavbarComp = () => {
                                                 fontSize: "19px",
                                                 fontWeight: "700",
                                             }}
-                                            startIcon={<ShoppingCartOutlinedIcon sx={{ fontSize: "24px !important" }} />}
+                                            startIcon={<TfiMenuAlt sx={{ fontSize: "24px !important" }} />}
                                             onClick={() => navigate("/products")}
                                         >
                                             {" "}
@@ -325,7 +329,7 @@ const NavbarComp = () => {
                                                 fontSize: "19px",
                                                 fontWeight: "700",
                                             }}
-                                            startIcon={<ShoppingCartOutlinedIcon sx={{ fontSize: "24px !important" }} />}
+                                            startIcon={<BsCart3 sx={{ fontSize: "24px !important" }} />}
                                             onClick={() => navigate("/cart")}
                                         >
                                             {" "}
