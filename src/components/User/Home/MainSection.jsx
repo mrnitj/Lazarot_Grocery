@@ -109,8 +109,6 @@ const MainSection = () => {
                             <Typography
                                 sx={{
                                     fontSize: { xs: "27px", sm: "44px", lg: "48px" },
-
-                                    // background:'red',
                                     maxWidth: "478px",
                                     lineHeight: { sm: "53px", lg: "60px" },
                                     fontWeight: 800,
